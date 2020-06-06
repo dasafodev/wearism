@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Navbar from './components/Navbar';
 import './App.css';
 
 
@@ -12,15 +13,20 @@ function App() {
       document.documentElement.style.cssText=`
       --first-color:black;
       --second-color:white;
+      --third-color:blue;
+
     `;
     }
     else{
       document.documentElement.style.cssText=`
       --first-color:white;
       --second-color:black;
+      --third-color:red;
+
     `;
     }
   }
+
   const changeTheme = () => {
     (theme==='light')?setTheme('dark'): setTheme('light');
   }
@@ -32,6 +38,8 @@ function App() {
 
   return (
     <div  className="App">
+      <Navbar/>
+      
       <h1>Hello</h1>
       <p>World</p>
       <button onClick={handleTheme}>Change Theme</button>

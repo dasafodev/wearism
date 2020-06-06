@@ -1,0 +1,25 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 10px 10px;
+    
+}
+
+.Searcher{
+    display: flex;
+    width: 500px;
+    height: 40px;
+    align-items: center;
+
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: var(--element-gray);
+    justify-content: space-between ;
+}
+
+nav h1{
+    color: var(--third-color)!important;
+}
+

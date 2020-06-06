@@ -1,9 +1,11 @@
 :root{
   --first-color:white;
   --second-color:black;
+  --third-color:red;
+  --element-gray:#f8f8f8
 }
 
-.App {
+.Content {
   background-color: var(--first-color);
   color: var(--second-color);
   text-align: center;
