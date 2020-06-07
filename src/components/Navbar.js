@@ -1,18 +1,22 @@
 import React from 'react'
+import heart from './../assets/black-heart.png'
+import lens from './../assets/black-lens.png'
+
 import './styles/Navbar.css'
 
 function Navbar() {
     return (
         <nav className="Navbar">
-            <img src="" alt="My Web" />
+            <h1 className="Brand-name">wearism</h1>
             <div className="Searcher">
                 <span>Search for items</span>
-                <span>Lupa</span>
+                <img className="Img-icon" src={lens} alt="" />
+
             </div>
-            <div className="icons">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
+            <div className="Icons">
+                <img className="Img-icon" src={heart} alt="" />
+                <div className="Items">0</div>
+                <span>US</span>
             </div>
         </nav>
     )

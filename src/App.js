@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Navbar from './components/Navbar';
+import Banner from './components/Banner'
 import './App.css';
 
 
@@ -39,7 +40,7 @@ function App() {
   return (
     <div  className="App">
       <Navbar/>
-      
+      <Banner/>
       <h1>Hello</h1>
       <p>World</p>
       <button onClick={handleTheme}>Change Theme</button>

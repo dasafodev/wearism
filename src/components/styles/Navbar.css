@@ -3,23 +3,39 @@
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    padding: 10px 10px;
+    padding: 10px 0;
     
 }
-
+.Brand-name{
+    font-size:52px ;
+    margin: 0;
+    /* color: var(--second-color); */
+}
 .Searcher{
     display: flex;
     width: 500px;
     height: 40px;
     align-items: center;
-
     border-radius: 20px;
     padding: 10px 15px;
     background-color: var(--element-gray);
     justify-content: space-between ;
 }
 
-nav h1{
-    color: var(--third-color)!important;
+.Icons {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.Items{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.Img-icon{
+    height: 20px;
+}

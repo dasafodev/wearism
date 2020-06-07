@@ -1,0 +1,25 @@
+.Banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    height: 30vh;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.Content{
+    text-align: center;
+}
+.Content p{
+    font-size: 30px;
+    font-weight: 700;
+}
+.Content button{
+    padding: 15px 30px ;
+    border-radius: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    border: none;
+}
