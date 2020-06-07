@@ -1,0 +1,10 @@
+.Card{
+    display: flex;
+    color: black;
+    background-color: var(--element-gray);
+    align-items: center;
+    justify-content: space-around;
+    width: 220px;
+    height: 70px;
+    border-radius: 15px;
+}

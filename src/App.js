@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Navbar from './components/Navbar';
-import Banner from './components/Banner'
+import Banner from './components/Banner';
+import HorCard from './components/HorizontalCard';
 import './App.css';
 
 
@@ -41,6 +42,7 @@ function App() {
     <div  className="App">
       <Navbar/>
       <Banner/>
+      <HorCard isSelected={true}/>
       <h1>Hello</h1>
       <p>World</p>
       <button onClick={handleTheme}>Change Theme</button>
