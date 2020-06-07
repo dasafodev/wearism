@@ -16,7 +16,7 @@ function HorizontalCard(props) {
         width: props.width,
         height: props.height,
         borderRadius: '15px',
-        margin: '15px 0'
+        margin: '15px 15px 0px 0px'
     }
 
     const selected =  (isSelected) => {

@@ -8,14 +8,14 @@
     margin: 10px 0;
 }
 
-.Content{
+.Banner__content{
     text-align: center;
 }
-.Content p{
+.Banner__content p{
     font-size: 30px;
     font-weight: 700;
 }
-.Content button{
+.Banner__content button{
     padding: 15px 30px ;
     border-radius: 15px;
     font-weight: 700;

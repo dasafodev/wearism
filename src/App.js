@@ -2,9 +2,70 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import HorCard from "./components/HorizontalCard";
+import VertCard from "./components/VerticalCard";
 import "./App.css";
 
 function App() {
+
+  const photosList = [
+    {
+      image: 1
+    },
+    {
+      image: 2
+    },
+    {
+      image: 3
+    },
+    {
+      image: 4
+    },
+  ]
+
+  const filterList = [
+    {
+      text: "Sort",
+      height: "50px",
+      width: "100px",
+
+    },
+    {
+      text: "Product type",
+      height: "50px",
+      width: "100px",
+
+    },
+    {
+      text: "Style",
+      height: "50px",
+      width: "100px",
+
+    },
+    {
+      text: "Size",
+      height: "50px",
+      width: "100px",
+
+    },
+    {
+      text: "Colour",
+      height: "50px",
+      width: "100px",
+
+    },
+    {
+      text: "Price Range",
+      height: "50px",
+      width: "100px",
+
+    },
+    {
+      text: ">",
+      height: "50px",
+      width: "30px",
+      isSelected: true,
+    },
+  ]
   const categories = [
     {
       text: "HOME",
@@ -42,6 +103,7 @@ function App() {
       width: "200px",
     },
   ];
+
   const [theme, setTheme] = useState("light");
 
   const verifyTheme = () => {
@@ -74,8 +136,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Banner />
-      <div className="Content">
+      <div className="Main">
+        <Banner className="Banner" />
         <div className="Categories">
           {categories.map((category) => {
             return (
@@ -89,6 +151,28 @@ function App() {
               />
             );
           })}
+        </div>
+        <div className="Content">
+          <h1>COATS</h1>
+          <small>View more</small>
+          <div className="Filters">
+            {
+              filterList.map(item => {
+                return (
+                  <HorCard text={item.text} height={item.height} width={item.width} isSelected={item.isSelected} />
+                )
+              })
+            }
+          </div>
+          <div className="Photos">
+            {
+              photosList.map(item => {
+                return (
+                  <VertCard image={item.image} />
+                );
+              })
+            }
+          </div>
         </div>
       </div>
       <button onClick={handleTheme}>Change Theme</button>

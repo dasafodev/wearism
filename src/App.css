@@ -2,12 +2,44 @@
   --first-color:white;
   --second-color:black;
   --third-color:red;
-  --element-gray:#f8f8f8
+  --element-gray:#f1f1f1
 }
 
 .App{
   padding: 0px 20px;
 }
-ul{
-  padding: 0;
+
+.Main{
+  display: grid;
+  gap: 0 3em;
+  grid-template-columns: 0.15fr 1fr;
+  grid-template-areas:      "Banner Banner "
+                            "Categories Content" ;
+}
+
+.Banner{
+ grid-area: Banner;
+}
+.Categories{
+ grid-area: Categories;
+}
+
+.Content{
+  grid-area: Content;
+  text-align: left;
+}
+
+.Content h1{
+  margin: 15px 0 5px 0;
+}
+
+.Filters{
+  display: flex;
+}
+
+.Photos{
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-between;
 }
