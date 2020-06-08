@@ -29,7 +29,7 @@ function VerticalCard(props) {
     const heartStyle = {
         height:'30px',
         width:'30px',
-        backgroundColor:'white',
+        backgroundColor:'var(--element-gray)',
         borderRadius:'30px',
         display:'flex',
         justifyContent:'center',

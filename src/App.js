@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import HorCard from "./components/HorizontalCard";
@@ -104,38 +104,52 @@ function App() {
     },
   ];
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("Light");
 
   const verifyTheme = () => {
-    if (theme === "dark") {
+    if (theme === "Dark") {
       document.documentElement.style.cssText = `
-      --first-color:black;
+      --first-color:#121212;
       --second-color:white;
       --third-color:blue;
+      --element-gray:#787878
 
     `;
     } else {
       document.documentElement.style.cssText = `
       --first-color:white;
-      --second-color:black;
+      --second-color:#121212;
       --third-color:red;
+      --element-gray:#f1f1f1
 
     `;
     }
   };
 
+  useEffect(() => {
+    verifyTheme()
+    
+  })
   const changeTheme = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
+    console.log(theme);
+    if (theme === "Light") { 
+      setTheme("Dark" ) ;
+    }
+    else { 
+      setTheme("Light");
+     }
+    console.log(theme);
+
   };
 
-  const handleTheme = () => {
+  const handleTheme =  () => {
     changeTheme();
-    verifyTheme();
+    // verifyTheme();
   };
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar changeTheme={handleTheme} currentTheme={theme} />
       <div className="Main">
         <Banner className="Banner" />
         <div className="Categories">
@@ -175,7 +189,7 @@ function App() {
           </div>
         </div>
       </div>
-      <button onClick={handleTheme}>Change Theme</button>
+      {/* <button onClick={handleTheme}>Change Theme</button> */}
     </div>
   );
 }

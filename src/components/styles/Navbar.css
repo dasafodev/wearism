@@ -9,7 +9,7 @@
 .Brand-name{
     font-size:52px ;
     margin: 0;
-    /* color: var(--second-color); */
+    color: var(--second-color);
 }
 .Searcher{
     display: flex;
@@ -24,18 +24,27 @@
 
 .Icons {
     display: flex;
-    width: 100px;
+    width: 150px;
     align-items: center;
     justify-content: space-between;
 }
 
+.Icons p{
+    color: var(--second-color); ;
+}
+
 .Items{
-    background-color: black;
-    color: white;
+    background-color: var(--second-color);
+    color: var(--first-color);
     padding: 5px 10px;
     border-radius: 20px;
 }
 
 .Img-icon{
     height: 20px;
+}
+
+.Btn-theme{
+    cursor: pointer;
+    color: var(--second-color); ;
 }

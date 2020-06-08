@@ -1,10 +1,15 @@
 import React from 'react'
-import heart from './../assets/black-heart.png'
+// import heart from './../assets/black-heart.png'
 import lens from './../assets/black-lens.png'
 
 import './styles/Navbar.css'
 
-function Navbar() {
+function Navbar(props) {
+    // const [hearth, setHearth] = useState('');
+    // import(`./../assets/white-${props.currentTheme}.png`).then(resp => {
+    //             setImage(resp.default);
+    //         })
+    // i
     return (
         <nav className="Navbar">
             <h1 className="Brand-name">wearism</h1>
@@ -14,9 +19,12 @@ function Navbar() {
 
             </div>
             <div className="Icons">
-                <img className="Img-icon" src={heart} alt="" />
+                <div className="Btn-theme" onClick={props.changeTheme}>
+                <p>{props.currentTheme}</p>
+                </div>
+                {/* <img className="Img-icon" src={heart} alt="" /> */}
                 <div className="Items">0</div>
-                <span>US</span>
+                <p>US</p>
             </div>
         </nav>
     )
